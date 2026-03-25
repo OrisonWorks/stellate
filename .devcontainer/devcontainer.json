@@ -1,0 +1,26 @@
+{
+  "name": "Sendama Puzzle Game",
+  "image": "mcr.microsoft.com/devcontainers/php:8.3",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {},
+    "ghcr.io/shyim/devcontainers-features/php:1": {
+      "version": "8.3",
+      "installComposer": true
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "xdebug.php-debug",
+        "bmewburn.vscode-intelephense-client",
+        "MehediDracula.php-namespace-resolver"
+      ],
+      "settings": {
+        "php.validate.executablePath": "/usr/local/bin/php"
+      }
+    }
+  },
+  "postCreateCommand": "composer global require sendamaphp/console && echo 'export PATH=\"$PATH:$HOME/.composer/vendor/bin:$HOME/.config/composer/vendor/bin\"' >> ~/.bashrc",
+  "forwardPorts": [],
+  "remoteUser": "vscode"
+}
