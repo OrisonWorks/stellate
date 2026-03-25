@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Scenes;
 
-use Sendama\Engine\Core\Scene;
+use Sendama\Engine\Core\Scenes\Scene;
 use Sendama\Engine\Core\Input;
 use App\Game\Maze;
 use App\Entities\Player;
