@@ -1,0 +1,21 @@
+{
+  "name": "Stellate",
+  "description": "A quantum space maze escape game",
+  "version": "1.0.0",
+  "author": "SendamaPHP Team",
+  "entry": "index.php",
+  "width": 80,
+  "height": 24,
+  "fps": 30,
+  "scenes": [
+    "TitleScene",
+    "GameScene",
+    "GameOverScene",
+    "VictoryScene"
+  ],
+  "assets": {
+    "sprites": "assets/sprites",
+    "sounds": "assets/sounds",
+    "maps": "assets/maps"
+  }
+}
