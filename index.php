@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-use Sendama\Engine\Core\Game;
+use Sendama\Engine\Game;
 use App\Scenes\TitleScene;
 use App\Scenes\GameScene;
 use App\Scenes\GameOverScene;
@@ -17,13 +17,7 @@ $config = json_decode(file_get_contents(__DIR__ . '/sendama.json'), true);
 $game = new Game($config['name'], $config['width'], $config['height'], $config['fps']);
 
 // Register scenes
-$game->addScene('title', new TitleScene());
-$game->addScene('game', new GameScene());
-$game->addScene('gameover', new GameOverScene());
-$game->addScene('victory', new VictoryScene());
-
-// Start with title scene
-$game->loadScene('title');
+$game->addScenes(new TitleScene(), new GameScene(), new GameOverScene(), new VictoryScene());
 
 // Run game loop
 $game->run();
